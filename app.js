@@ -5,8 +5,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const conf = require('./config.js');
-const databaseParams = conf.get('db');
-const mysql  = require('mysql');
 const db = require('./db.js');
 
 const app = express();
@@ -15,7 +13,7 @@ var authorsController = require('./app/controllers/authors.ctrl.js');
 var booksController = require('./app/controllers/books.ctrl.js');
 var editorialsController = require('./app/controllers/editorials.ctrl.js');
 
-const port = 8000;
+const port = conf.get('server').port;
 
 app.options('*', cors());
 app.use(cors());
@@ -30,20 +28,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 function connectToDatabase() {
-    var connection = mysql.createConnection({
-        host: databaseParams.host,
-        user: databaseParams.user,
-        password: databaseParams.password,
-        database: databaseParams.database
-    });  
+    var connection = db.connection;
     
     connection.connect(function (err) {                 
         if (err) {                                   
-            console.log('error when connecting to db:', err.code);
+            console.log('Error when connecting to db:', err.code);
             setTimeout(handleDisconnect, dbParams.timeoutBeforeReconnection);   
         } else {
-            console.log('Connected to db!');
-            db.connection = connection;
+            console.log('Connected to the db !');
         }                                           
     });                                             
     connection.on('error', function (err) {
