@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.7.20)
 # Base de datos: bookstore
-# Tiempo de Generación: 2018-08-28 19:57:33 +0000
+# Tiempo de Generación: 2018-08-28 23:18:43 +0000
 # ************************************************************
 
 
@@ -42,8 +42,7 @@ VALUES
 	(100,'1965-07-04','Joanne  Rowling, OBE, FRSL, pen names J. K. Rowling and Robert Galbraith, is a British novelist, screenwriter and film producer best known as the author of the Harry Potter fantasy series.','J.K. Rowling','http://cdn1us.denofgeek.com/sites/denofgeekus/files/2016/11/rowling.jpg'),
 	(200,'1892-03-01','Joanne  Rowling, OBE, FRSL, pen names J. K. Rowling and Robert Galbraith, is a British novelist, screenwriter and film producer best known as the author of the Harry Potter fantasy series.','J. R. R. Tolkien','http://www.biografiasyvidas.com/biografia/t/fotos/tolkien.jpg'),
 	(300,'1948-09-20','asA smkcxm slklkc n names J. K. Rowling and Robert Galbraith, is a British novelist','George R. R. Martin','http://static1.businessinsider.com/image/54d3c832eab8eabe028b4569-960/george-rr-martin-2011.jpg'),
-	(400,'1973-06-06','Joanne  Rowling, OBE, FRSL, pen names J. K. Rowling and Robert Galbraith, is a British novelist, screenwriter and film producer best known as the author of the Harry Potter fantasy series.','Patrick Rothfuss','http://librista.es/blog/wp-content/uploads/2014/05/patrick-rothfuss.jpg/5x10'),
-	(401,'2018-08-02','asdsa','Test','dasda');
+	(400,'1973-06-06','Joanne  Rowling, OBE, FRSL, pen names J. K. Rowling and Robert Galbraith, is a British novelist, screenwriter and film producer best known as the author of the Harry Potter fantasy series.','Patrick Rothfuss','http://librista.es/blog/wp-content/uploads/2014/05/patrick-rothfuss.jpg/5x10');
 
 /*!40000 ALTER TABLE `author` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -130,11 +129,7 @@ LOCK TABLES `editorial` WRITE;
 INSERT INTO `editorial` (`id`, `name`)
 VALUES
 	(100,'Oveja Negra'),
-	(200,'Siruela'),
-	(201,'Test'),
-	(202,'Test'),
-	(203,'Test 2'),
-	(204,'Test 2');
+	(200,'Siruela');
 
 /*!40000 ALTER TABLE `editorial` ENABLE KEYS */;
 UNLOCK TABLES;
